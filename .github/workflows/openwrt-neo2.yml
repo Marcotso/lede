@@ -58,7 +58,7 @@ jobs:
           cd package
           mkdir openwrt-packages
           cd openwrt-packages
-          git clone git clone https://github.com/jefferymvp/luci-app-koolproxyR
+          git clone https://github.com/jefferymvp/luci-app-koolproxyR
           git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
           git clone https://github.com/rosywrt/luci-theme-rosy.git
 
