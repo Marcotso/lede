@@ -10,13 +10,13 @@
 name: X86
 
 on:
-  push:
-    branches: 
-     - master
-#   schedule:
-#     - cron: 0 20 * * *
-#   release:
-#     types: [published]
+#  push:
+#    branches: 
+#     - master
+   schedule:
+     - cron: 0 20 * * *
+   release:
+     types: [published]
 
 jobs:
 
@@ -104,14 +104,11 @@ jobs:
           # 无论你想要对固件进行怎样的定制, 都需要且只需要修改 EOF 回环内的内容.
           # 
 
-          # 编译neo2固件:
+          # 编译x86固件:
           cat >> .config <<EOF
           CONFIG_TARGET_x86=y
           CONFIG_TARGET_x86_64=y
           CONFIG_TARGET_x86_64_Generic=y
-          # CONFIG_TARGET_sunxi=y
-          # CONFIG_TARGET_sunxi_cortexa53=y
-          # CONFIG_TARGET_sunxi_cortexa53_DEVICE_friendlyarm_nanopi-neo2=y
           EOF
           
           # 固件压缩:
@@ -120,9 +117,9 @@ jobs:
           EOF
 
           # 编译UEFI固件:
-          cat >> .config <<EOF
-          CONFIG_EFI_IMAGES=y
-          EOF
+          # cat >> .config <<EOF
+          # CONFIG_EFI_IMAGES=y
+          # EOF
 
           # IPv6支持:
           cat >> .config <<EOF
