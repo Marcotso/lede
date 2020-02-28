@@ -10,13 +10,13 @@
 name: X86
 
 on:
-#  push:
-#    branches: 
-#     - master
-   schedule:
-     - cron: 0 20 * * *
-   release:
-     types: [published]
+  push:
+    branches: 
+     - master
+#   schedule:
+#    - cron: 0 20 * * *
+#   release:
+#     types: [published]
 
 jobs:
 
@@ -235,9 +235,9 @@ jobs:
       - name: Make download
         run: |
           make download -j8
-          find ./dl/ -size -1024c -exec rm -f {} \;
+          find dl -size -1024c -exec rm -f {} \;
           df -h
-
+          
       - name: Compile firmware
         run: |
           make -j$(nproc) || make -j1 V=s
