@@ -183,7 +183,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-ttyd=y
           CONFIG_PACKAGE_luci-app-v2ray-server=y
           CONFIG_PACKAGE_luci-app-koolproxyR=y
-          CONFIG_PACKAGE_UnblockNeteaseMusic=y
+          CONFIG_PACKAGE_luci-app-unblockmusic=y
           # CONFIG_PACKAGE_luci-app-verysync=y
           # CONFIG_PACKAGE_luci-app-webadmin=y
           # CONFIG_PACKAGE_luci-app-wireguard=y
