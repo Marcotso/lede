@@ -7,16 +7,16 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: neo2
+name: X86
 
 on:
-#  push:
-#    branches: 
-#     - master
-   schedule:
-     - cron: 0 20 * * *
-   release:
-     types: [published]
+  push:
+    branches: 
+     - master
+#   schedule:
+#     - cron: 0 20 * * *
+#   release:
+#     types: [published]
 
 jobs:
 
@@ -154,6 +154,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-adbyby-plus=y
           # CONFIG_PACKAGE_luci-app-aria2=y
           # CONFIG_PACKAGE_luci-app-accesscontrol=y
+          CONFIG_PACKAGE_luci-app-arpbind=y
           # CONFIG_PACKAGE_luci-app-baidupcs-web=y
           # CONFIG_PACKAGE_luci-app-docker=y
           # CONFIG_PACKAGE_luci-app-frpc=y
@@ -182,6 +183,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-ttyd=y
           CONFIG_PACKAGE_luci-app-v2ray-server=y
           CONFIG_PACKAGE_luci-app-koolproxyR=y
+          CONFIG_PACKAGE_UnblockNeteaseMusic=y
           # CONFIG_PACKAGE_luci-app-verysync=y
           # CONFIG_PACKAGE_luci-app-webadmin=y
           # CONFIG_PACKAGE_luci-app-wireguard=y
