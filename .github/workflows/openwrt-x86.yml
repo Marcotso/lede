@@ -112,6 +112,12 @@ jobs:
           CONFIG_TARGET_x86_64_Generic=y
           EOF
           
+          # 设置固件大小:
+          cat >> .config <<EOF
+          CONFIG_TARGET_KERNEL_PARTSIZE=30
+          CONFIG_TARGET_ROOTFS_PARTSIZE=400
+          EOF
+          
           # 固件压缩:
           cat >> .config <<EOF
           CONFIG_TARGET_IMAGES_GZIP=y
@@ -206,10 +212,10 @@ jobs:
           cat >> .config <<EOF
           CONFIG_PACKAGE_curl=y
           CONFIG_PACKAGE_htop=y
-          CONFIG_PACKAGE_nano=y
-          CONFIG_PACKAGE_screen=y
-          CONFIG_PACKAGE_tree=y
-          CONFIG_PACKAGE_vim-fuller=y
+          # CONFIG_PACKAGE_nano=y
+          # CONFIG_PACKAGE_screen=y
+          # CONFIG_PACKAGE_tree=y
+          # CONFIG_PACKAGE_vim-fuller=y
           CONFIG_PACKAGE_wget=y
           EOF
 
