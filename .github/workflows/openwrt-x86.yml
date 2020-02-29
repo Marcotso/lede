@@ -178,7 +178,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-koolproxyR=y
           CONFIG_PACKAGE_luci-app-unblockmusic=y
           CONFIG_PACKAGE_luci-app-ipsec-vpnd=m
-          CONFIG_PACKAGE_luci-app-samba4=m
+          CONFIG_PACKAGE_luci-app-samba=m
           CONFIG_PACKAGE_luci-app-wrtbwmon=m
           CONFIG_PACKAGE_luci-app-sqm=m
           CONFIG_PACKAGE_luci-app-upnp=m
